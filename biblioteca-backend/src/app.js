@@ -9,11 +9,13 @@ app.use(cors());
 app.use(express.json());
 
 // ----- RUTAS -----
+
 // Ruta base de prueba
 app.get("/", (req, res) => {
-  res.send("📚 API de Biblioteca funcionando correctamente");
+  res.send("API de Biblioteca funcionando correctamente");
 });
 
+// Crear usuarios, libros
 app.use("/api/usuarios", usuarioRoutes);
 app.use("/api/libros", libroRoutes);
 
